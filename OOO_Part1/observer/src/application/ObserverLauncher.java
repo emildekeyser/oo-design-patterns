@@ -1,6 +1,6 @@
-package template;
+package application;
 
-public class TemplateLauncher {
+public class ObserverLauncher {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

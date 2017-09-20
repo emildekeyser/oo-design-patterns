@@ -1,6 +1,6 @@
-package strategy;
+package application;
 
-public class StrategyLauncher {
+public class JavaFxLauncher {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
