@@ -1,7 +1,7 @@
 package cipher_refactor;
 
 public class Mirroring extends Cipher 
-{
+{	
 	@Override
 	public String encode(String plaintext) 
 	{
