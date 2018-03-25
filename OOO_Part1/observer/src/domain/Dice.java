@@ -7,17 +7,18 @@ import javafx.scene.control.Button;
 
 public class Dice
 {
-	private ArrayList<Button> buttons;
+	private ArrayList<Player> players;
 	private int eyes;
 
 	public Dice()
 	{
-		this.buttons = new ArrayList<>();
+		this.players = new ArrayList<>();
+		this.eyes = 1;
 	}
 	
-	public void registerPlayer(Button btn)
+	public void registerPlayer(Player pl)
 	{
-		this.buttons.add(btn);
+		this.players.add(pl);
 	}
 	
 	public void update(int eyes)
@@ -27,10 +28,15 @@ public class Dice
 			this.eyes = eyes;
 		}
 		
-		for (Button btn : buttons)
+		for (Player pl : players)
 		{
-			btn.setText(Integer.toString(eyes));
+			pl.update(this);
 		}
+	}
+	
+	public int getEyes()
+	{
+		return this.eyes;
 	}
 	
 	public void roll()

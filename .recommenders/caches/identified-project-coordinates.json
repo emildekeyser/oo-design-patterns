@@ -1,1 +1,1 @@
-[[{"location":"/media/user1/data/Documents/OOO/OOO_Part1/observer","type":"PROJECT","hints":{"PROJECT_NAME":"observer"}},"ABSENT"],[{"location":"/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jfxrt.jar","type":"JAR","hints":{}},"ABSENT"],[{"location":"/usr/lib/jvm/java-8-openjdk-amd64","type":"JRE","hints":{}},"jre:jre:1.8.0"]]
+[[{"location":"/usr/lib/jvm/java-8-openjdk-amd64","type":"JRE","hints":{}},"jre:jre:1.8.0"],[{"location":"/media/user1/data/Documents/OOO/OOO_Part1/singleton","type":"PROJECT","hints":{"PROJECT_NAME":"singleton"}},"ABSENT"]]
