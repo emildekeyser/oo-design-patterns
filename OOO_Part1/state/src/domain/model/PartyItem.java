@@ -9,14 +9,11 @@ public class PartyItem
 	
 	private RentableItemState currentState;
 	
-	private boolean gotDamaged;
 	private double price;
 	private String name;
 
 	public PartyItem(String name, double basePrice)
-	{
-		this.gotDamaged = false;
-		
+	{	
 		this.availableState = new Available();
 		this.rentedState = new Rented();
 		this.damagedState = new Damaged();
@@ -49,12 +46,7 @@ public class PartyItem
 	{
 		this.currentState = this.removedState;
 	}
-	
-	boolean gotDamaged()
-	{
-		return this.gotDamaged ;
-	}
-	
+
 	// PUBLIC STATE ALTERING METHODS
 	
 	public void rent()
@@ -65,9 +57,9 @@ public class PartyItem
 	{
 		this.currentState.remove(this);
 	}
-	public void returnItem()
+	public void returnItem(boolean damaged)
 	{
-		this.currentState.returnItem(this);
+		this.currentState.returnItem(this, damaged);
 	}
 	public void repair()
 	{
@@ -96,14 +88,14 @@ public class PartyItem
 		this.price = price;
 	}
 	
-	public void itemGotDamaged()
-	{
-		this.gotDamaged = false;
-	}
-	
 	public double damageCompenesation()
 	{
 		return this.price / 3;
+	}
+	
+	public String getState()
+	{
+		return this.currentState.getClass().getName();
 	}
 	
 }

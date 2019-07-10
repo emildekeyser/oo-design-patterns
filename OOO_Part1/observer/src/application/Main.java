@@ -1,6 +1,8 @@
 package application;
 
+import controller.HumanPlayer;
 import domain.Dice;
+import domain.Player;
 import javafx.application.Application;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -32,8 +34,9 @@ public class Main extends Application
 	private void makePlayerWindow(int index, Stage primaryStage)
 	{
 		Button rollButton = new Button("Roll");
-		makeHandler(rollButton, index);
-		die.registerPlayer(rollButton);
+		makeHandler(rollButton);
+		Player p = new HumanPlayer(rollButton);
+		this.die.registerPlayer(p);
 		
 		FlowPane root = new FlowPane();
 		root.setAlignment(Pos.CENTER);
@@ -47,7 +50,7 @@ public class Main extends Application
 		primaryStage.show();
 	}
 
-	private void makeHandler(Button rollButton, int index)
+	private void makeHandler(Button rollButton)
 	{
 		rollButton.setOnMouseClicked(new EventHandler<Event>()
 		{

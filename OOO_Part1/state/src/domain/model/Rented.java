@@ -4,9 +4,9 @@ public class Rented extends RentableItemState
 {
 
 	@Override
-	public void returnItem(PartyItem item)
+	public void returnItem(PartyItem item, boolean damaged)
 	{
-		if(item.gotDamaged())
+		if(damaged)
 		{
 			item.setDamagedState();
 		}

@@ -10,7 +10,7 @@ public abstract class RentableItemState
 	{
 		throw new IllegalStateException();
 	}
-	public void returnItem(PartyItem item)
+	public void returnItem(PartyItem item, boolean damaged)
 	{
 		throw new IllegalStateException();
 	}

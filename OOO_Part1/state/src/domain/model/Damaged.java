@@ -12,7 +12,6 @@ public class Damaged extends RentableItemState
 	@Override
 	public void repair(PartyItem item)
 	{
-		item.itemRepair();
 		item.setAvailableState();
 	}
 	

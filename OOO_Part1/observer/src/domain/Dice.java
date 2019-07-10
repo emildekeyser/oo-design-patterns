@@ -3,8 +3,6 @@ package domain;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-import javafx.scene.control.Button;
-
 public class Dice
 {
 	private ArrayList<Player> players;
@@ -14,11 +12,6 @@ public class Dice
 	{
 		this.players = new ArrayList<>();
 		this.eyes = 1;
-	}
-	
-	public void registerPlayer(Player pl)
-	{
-		this.players.add(pl);
 	}
 	
 	public void update(int eyes)
@@ -42,5 +35,10 @@ public class Dice
 	public void roll()
 	{
 		this.update(ThreadLocalRandom.current().nextInt(1, 6));
+	}
+
+	public void registerPlayer(Player p)
+	{
+		this.players.add(p);
 	}
 }
